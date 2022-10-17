@@ -25,3 +25,7 @@
 1. Посмотреть текущий TimezoneOffset вы можете используя объект `Date`
 1. Можете использовать библиотеку momentjs.
 
+---
+
+
+[![Build status](https://ci.appveyor.com/api/projects/status/mln9t3h6297w7e6h/branch/main?svg=true)](https://ci.appveyor.com/project/222Alexa44925/ra-lifecycle-watches/branch/main)

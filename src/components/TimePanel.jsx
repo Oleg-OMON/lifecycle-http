@@ -28,7 +28,7 @@ const TimePanel = (data) => {
   };
 
   const handleRemove = (id) => {
-    console.log(123)
+
     setWatches((prev) => prev.filter((o) => o.id !== id));
   };
 

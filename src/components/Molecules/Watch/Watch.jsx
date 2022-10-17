@@ -11,7 +11,6 @@ export default class Watch extends React.Component {
     this.offset = props.offset;
 
     this.state = {
-      //date: moment.tz(time, utc+timeZone);
       date: new Date(),
     };
   }
@@ -24,8 +23,6 @@ export default class Watch extends React.Component {
   }
 
   tick() {
-    //this.resultHours=this.state.date.getHours() + this.timeZone - this.offset;
-
     this.setState({
       date: new Date(),
     });

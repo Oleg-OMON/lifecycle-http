@@ -12,8 +12,8 @@ const Form = ({ data }) => {
 
   const { childData, offset, onAdd } = data;
  
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     let timeName = inputNameRef.current.value;
 
     if (timeName === "") {
@@ -38,11 +38,11 @@ const Form = ({ data }) => {
     inputTimeZoneRef.current.value = 0;
   };
 
-  const handleInput = (e) => {
-    e.preventDefault();
-    e.target.type === "text"
-      ? (inputNameRef.current = e.target)
-      : (inputTimeZoneRef.current = e.target);
+  const handleInput = (event) => {
+    event.preventDefault();
+    event.target.type === "text"
+      ? (inputNameRef.current = event.target)
+      : (inputTimeZoneRef.current = event.target);
   };
 
   return (

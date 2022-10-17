@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 /**Кнопка */
 export const Button = (data) => {
-  console.log(data, "btn");
   return (
     <React.Fragment>
       <button
@@ -13,7 +12,7 @@ export const Button = (data) => {
         className={data.className + "__btn"}
         onClick={data.onClick ? () => data.onClick(data.id) : null}
       >
-        {data.text? data.text : data.name}
+        {data.text ? data.text : data.name}
       </button>
     </React.Fragment>
   );
@@ -31,7 +30,6 @@ Button.propTypes = {
 
 /**Поле ввода в форме поиска */
 export const Input = React.forwardRef((data, ref) => {
-  console.log(data)
   return (
     <React.Fragment>
       <div className="input-wrapper">
@@ -53,18 +51,12 @@ export const Input = React.forwardRef((data, ref) => {
   );
 });
 
-/*Input.propTypes = {
-  data: PropTypes.object.isRequired,
-};*/
-
 /**Текстовая ссылка */
 
 export const Link = (props) => {
   if (!props) {
     return null;
   }
-
-  console.log(props, "link");
 
   const classes = props.className + "-link";
   let result = React.createElement(
@@ -81,12 +73,7 @@ export const Link = (props) => {
     </>
   );
 };
-/*Link.propTypes = {
-  props: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-  }),
-};*/
+
+Link.propTypes = {
+  props: PropTypes.object.isRequired,
+};
